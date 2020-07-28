@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyWeather</string>
+    <string name="viewholder_city">City Name: </string>
+    <string name="viewholder_counry">Country: </string>
+    <string name="viewholder_id">ID: </string>
+    <string name="fragment_weather_selected_no_internet">No Internet Connection</string>
+    <string name="fragment_weather_selected_WeatherApp">WeatherApp</string>
+    <string name="fragment_weather_selected_sunrise">Sunrise</string>
+    <string name="fragment_weather_selected_sunset">Sunset</string>
+    <string name="fragment_weather_selected_wind">Wind</string>
+    <string name="fragment_weather_selected_pressure">Pressure</string>
+    <string name="fragment_weather_selected_humidity">Humidity</string>
+</resources>

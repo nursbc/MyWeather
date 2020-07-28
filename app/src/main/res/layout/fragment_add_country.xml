@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_weather_app_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WeatherApp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edittext_fragment_country_add_city_name_text"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:hint="City Name Like almaty"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_weather_app_toolbar"
+
+        />
+    <EditText
+        android:id="@+id/edittext_fragment_country_add_country_code_text"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:hint="Country Code Like kz"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_fragment_country_add_city_name_text"/>
+
+    <Button
+        android:id="@+id/button_fragment_country_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Country"
+        android:textColor="@color/color_black"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_fragment_country_add_country_code_text"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
