@@ -118,16 +118,21 @@ class SelectedCountryWeatherFragmentDetails : Fragment() {
 
         val weatherDatabase = getDatabase()
         val getLastWeatherId = weatherDatabase.getWeatherDao().initiateGetLastWeather(country!!.id)
+        var getWeatherInDB = weatherDatabase.getWeatherDao().getWeatherById(getLastWeatherId)
 
         if (getLastWeatherId == 0) {
             fragment_weather_selected_county_visibility.visibility = View.INVISIBLE
             fragment_weather_selected_no_internet_connection.visibility = TextView.VISIBLE
             return
         }
+        else if(getWeatherInDB.equals(null))
+        {
+            fragment_weather_selected_county_visibility.visibility = View.INVISIBLE
+            fragment_weather_selected_no_internet_connection.visibility = TextView.VISIBLE
+            return
+        }
 
         fragment_weather_selected_no_internet_connection.visibility = TextView.INVISIBLE
-
-         var getWeatherInDB = weatherDatabase.getWeatherDao().getWeatherById(getLastWeatherId)
 
         val updatedAtText = "Updated at: " + SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
             .format(Date(getWeatherInDB.updatedAt as Long * 1000))
